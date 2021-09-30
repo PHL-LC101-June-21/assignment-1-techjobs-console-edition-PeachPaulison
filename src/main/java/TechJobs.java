@@ -124,20 +124,19 @@ public class TechJobs {
         return;
     }
         for (HashMap<String, String> map : someJobs) {
-            String asterisk = "*****\n";
-//            System.out.println("*****\n");
-//            System.out.println("*****");
+            String asterisk = "\n*****\n";
+            //System.out.println(asterisk);
+//          System.out.println("*****\n");
+//          System.out.println("*****");
 
             for (Map.Entry<String, String> entry : map.entrySet()) {
                 entry.getKey();
                 entry.getValue();
-                System.out.println(entry.getKey() + ": " + entry.getValue());
-
-
-
+                asterisk+=entry.getKey() + ": " + entry.getValue() + "\n";
 
             }
-
+            asterisk+="*****";
+            System.out.println(asterisk);
         }
     }
 // System.out.println("printJobs is not implemented yet");
