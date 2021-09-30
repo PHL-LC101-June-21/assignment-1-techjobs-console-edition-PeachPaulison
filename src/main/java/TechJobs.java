@@ -118,8 +118,38 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
-        System.out.println("printJobs is not implemented yet");
+    private static void printJobs(@org.jetbrains.annotations.NotNull ArrayList<HashMap<String, String>> someJobs) {
+    if (someJobs.size() == 0) {
+        System.out.println("No Results");
+        return;
     }
+        for (HashMap<String, String> map : someJobs) {
+            String asterisk = "*****\n";
+//            System.out.println("*****\n");
+//            System.out.println("*****");
+
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                entry.getKey();
+                entry.getValue();
+                System.out.println(entry.getKey() + ": " + entry.getValue());
+
+
+
+
+            }
+
+        }
+    }
+// System.out.println("printJobs is not implemented yet");
 }
+
+//Use get and keySet?
+
+//Use a for loop to go through each hashmap in the someJobs arrayList and
+//Use .get(?) on the keys in to get their values
+//Do I need to populate a temporary variable to do this?
+// (Since it's "all" can I just print the someJobs ArrayList of HashMaps?)
+//in the print format, include "*****" above and below as delimiters
+// convert to make case insensitive (Do I need for this or just for findByValue method?)
+
+

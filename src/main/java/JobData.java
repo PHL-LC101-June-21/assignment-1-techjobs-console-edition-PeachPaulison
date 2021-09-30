@@ -73,6 +73,8 @@ public class JobData {
         // load data, if not already loaded
         loadData();
 
+
+
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
@@ -99,7 +101,26 @@ public class JobData {
         loadData();
 
         // TODO - implement this method
-        return null;
+        //create ArrayList<HashMap<String, String> searchValueJobs = new ArrayList<>
+        //for (HashMap<String, String> map : allJobs.
+        //loop through columns of data in each hashmap on second loop. convert toLowerCase()
+        // Check for duplicate search term in same hashmap - use continue to move to next map when value is found.
+        //populate searchValueJobs Arraylist with hashmaps of the jobs that have search term.  .put? .add?
+        //return search results  --  Return or Print?
+
+
+        ArrayList<HashMap<String, String>> searchValueJobs = new ArrayList<>();
+        for (HashMap<String, String> map : allJobs) {
+            for (String key : map.keySet()) {
+                if (map.get(key).toLowerCase().contains(value.toLowerCase())) {
+                    searchValueJobs.add(map);
+                    break;
+                }
+            }
+        }
+
+
+        return searchValueJobs;
     }
 
     /**
