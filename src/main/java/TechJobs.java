@@ -125,7 +125,7 @@ public class TechJobs {
     }
         for (HashMap<String, String> map : someJobs) {
             String asterisk = "\n*****\n";
-            //System.out.println(asterisk);
+//          System.out.println(asterisk);
 //          System.out.println("*****\n");
 //          System.out.println("*****");
 
